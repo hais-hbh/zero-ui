@@ -8,8 +8,12 @@
   </button>
 </template>
 <script>
+import Icon from './icon.vue'
 export default {
   // props: ['icon', 'iconPosition']
+  components:{
+    'zero-icon':Icon
+  },
   props: {
     icon:{},
     loading:{
