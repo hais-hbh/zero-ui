@@ -36,20 +36,24 @@
 </style>
 <body>
 <div id="app">
-    <zero-button :loading="loading1" @click="loading1 = !loading1">
-        我爱JS
-    </zero-button>
-    <zero-button icon="setting" icon-position="left" :loading="loading2" @click="loading2 = !loading2">
-        我爱JS
-    </zero-button>
-    <zero-button icon="setting" icon-position="right" :loading="loading3" @click="loading3 = !loading3">
-        我爱JS
-    </zero-button>
-    <zero-button-group>
-        <zero-button icon="left">上一页</zero-button>
-        <zero-button>更多</zero-button>
-        <zero-button icon="right" icon-position="right">下一页</zero-button>
-    </zero-button-group>
+<!--    <zero-button :loading="loading1" @click="loading1 = !loading1">-->
+<!--        我爱JS-->
+<!--    </zero-button>-->
+<!--    <zero-button icon="setting" icon-position="left" :loading="loading2" @click="loading2 = !loading2">-->
+<!--        我爱JS-->
+<!--    </zero-button>-->
+<!--    <zero-button icon="setting" icon-position="right" :loading="loading3" @click="loading3 = !loading3">-->
+<!--        我爱JS-->
+<!--    </zero-button>-->
+<!--    <zero-button-group>-->
+<!--        <zero-button icon="left">上一页</zero-button>-->
+<!--        <zero-button>更多</zero-button>-->
+<!--        <zero-button icon="right" icon-position="right">下一页</zero-button>-->
+<!--    </zero-button-group>-->
+    <zero-input value="张三"></zero-input>
+    <zero-input value="李四" disabled></zero-input>
+    <zero-input value="王五" readonly></zero-input>
+    <zero-input value="赵" error="姓名不能少于两个字"></zero-input>
 </div>
 <script src="./src/app.js"></script>
 <script src="./src/icon.js"></script>

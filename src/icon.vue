@@ -5,11 +5,12 @@
 </template>
 <script>
 export default {
+  name:'zero-icon',
   props:['name']
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .zero-icon {
   width: 1em;
   height: 1em;

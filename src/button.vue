@@ -10,6 +10,7 @@
 <script>
 import Icon from './icon.vue'
 export default {
+  name:'zero-button',
   // props: ['icon', 'iconPosition']
   components:{
     'zero-icon':Icon
@@ -30,7 +31,7 @@ export default {
   }
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @keyframes loading {
   0%{
     transform: rotate(0deg);
