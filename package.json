@@ -22,5 +22,8 @@
   "homepage": "https://github.com/hais-hbh/zero-ui#readme",
   "dependencies": {
     "vue": "^2.6.13"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
   }
 }
