@@ -1,6 +1,6 @@
 <template>
   <button class="zero-button" :class="{[`icon-${iconPosition}`]:true}">
-    <zero-icon v-if="icon" :name="icon" ></zero-icon>
+    <zero-icon v-if="icon" :name="icon" class="icon"></zero-icon>
     <span class="content">
       <slot></slot>
     </span>
