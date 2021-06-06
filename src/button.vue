@@ -1,6 +1,7 @@
 <template>
   <button class="zero-button" :class="{[`icon-${iconPosition}`]:true}">
     <zero-icon v-if="icon" :name="icon" class="icon"></zero-icon>
+    <zero-icon class="loading" name="loading"></zero-icon>
     <span class="content">
       <slot></slot>
     </span>
@@ -22,6 +23,14 @@ export default {
 }
 </script>
 <style lang="scss">
+@keyframes loading {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
 .zero-button {
   font-size: var(--font-size);
   height: var(--button-height);
@@ -47,6 +56,9 @@ export default {
   > .icon{
     order: 1;
     margin-right: .3em;
+  }
+  > .loading{
+    animation: loading 1s infinite linear;
   }
   > .content{
     order: 2;
