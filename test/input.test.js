@@ -55,22 +55,22 @@ describe('Input', () => {
             expect(errorMessage.innerText).to.equal('123')
         })
     })
-    describe('event',()=>{
+    describe('event',()=> {
         const Constructor = Vue.extend(Input)
         let vm
-        afterEach(()=>{
+        afterEach(() => {
             vm.$destroy()
         })
-        it('支持 change/input/focus/blur 事件',()=>{
-            ['change','input','focus','blur'].forEach((eventName)=>{
-                vm =new Constructor({}).$mount()
+        it('支持 change/input/focus/blur 事件', () => {
+            ['change', 'input', 'focus', 'blur'].forEach((eventName) => {
+                vm = new Constructor({}).$mount()
                 const callback = sinon.fake()
-                vm.$on(eventName,callback)
+                vm.$on(eventName, callback)
                 let event = new Event(eventName)
                 let inputElement = vm.$el.querySelector('input')
                 inputElement.dispatchEvent(event)
                 expect(callback).to.have.been.calledWith(event)
             })
-
         })
+    })
 })
