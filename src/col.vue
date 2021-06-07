@@ -49,6 +49,21 @@ export default {
       gutter: 0,
     }
   },
+  methods: {
+    createClasses(obj, str = '') {
+      if (!obj) {
+        return []
+      }
+      let arr = []
+      if (obj.span) {
+        arr.push(`col-${str}${obj.span}`)
+      }
+      if (obj.offset) {
+        arr.push(`offset-${str}${obj.offset}`)
+      }
+      return arr
+    }
+  },
   computed: {
     colStyle() {
       return {
@@ -58,12 +73,13 @@ export default {
     },
     colClass() {
       let {span, offset, ipad, narrowPc, pc, widePc} = this
-      return [span && `col-${span}`, offset && `offset-${offset}`,
 
-        ...(ipad ? [`col-ipad-${ipad.span}`]:[]),
-        ...(narrowPc ? [`col-narrow-pc-${narrowPc.span}`]:[]),
-        ...(pc ? [`col-pc-${pc.span}`]:[]),
-        ...(widePc ? [`col-wide-pc-${widePc.span}`]:[]),
+      return [
+        ...this.createClasses({span, offset}),
+        ...this.createClasses(ipad, 'ipad-'),
+        ...this.createClasses(narrowPc, 'narrow-pc-'),
+        ...this.createClasses(pc, 'pc-'),
+        ...this.createClasses(widePc, 'wide-pc-')
       ]
     }
   },
@@ -85,7 +101,7 @@ export default {
     }
   }
 
-  @media (min-width: 577px){
+  @media (min-width: 577px) {
     $class-prefix: col-ipad- ;
 
     @for $n from 1 through 24 {
@@ -100,7 +116,7 @@ export default {
       }
     }
   }
-  @media (min-width: 769px){
+  @media (min-width: 769px) {
     $class-prefix: col-narrow-pc- ;
 
     @for $n from 1 through 24 {
