@@ -26,7 +26,6 @@
     }
 
     #app {
-        margin: 20px;
     }
 
     body {
@@ -36,34 +35,44 @@
 </style>
 <style>
     .demo {
-        background: #ddd;
         border: 1px solid #666;
-        height: 100px;
+        min-height: 100px;
     }
 </style>
 <body>
 
 <div id="app">
-    <zero-row>
-        <zero-col span="24" :narrow-pc="{span:8}">
-            <div class="demo"></div>
-        </zero-col>
-        <zero-col span="24" :narrow-pc="{span:8}">
-            <div class="demo"></div>
-        </zero-col>
-        <zero-col span="24" :narrow-pc="{span:8}">
-            <div class="demo"></div>
-        </zero-col>
-        <zero-col span="24" :narrow-pc="{span:8}">
-            <div class="demo"></div>
-        </zero-col>
-        <zero-col span="24" :narrow-pc="{span:8}">
-            <div class="demo"></div>
-        </zero-col>
-        <zero-col span="24" :narrow-pc="{span:8}">
-            <div class="demo"></div>
-        </zero-col>
-    </zero-row>
+    <zero-layout style="height: 100vh">
+        <zero-sider class="demo">sider</zero-sider>
+
+        <zero-layout>
+            <zero-header class="demo">header</zero-header>
+            <zero-content class="demo">content</zero-content>
+            <zero-footer class="demo">footer</zero-footer>
+        </zero-layout>
+
+
+    </zero-layout>
+<!--    <zero-row>-->
+<!--        <zero-col span="24" :narrow-pc="{span:8}">-->
+<!--            <div class="demo"></div>-->
+<!--        </zero-col>-->
+<!--        <zero-col span="24" :narrow-pc="{span:8}">-->
+<!--            <div class="demo"></div>-->
+<!--        </zero-col>-->
+<!--        <zero-col span="24" :narrow-pc="{span:8}">-->
+<!--            <div class="demo"></div>-->
+<!--        </zero-col>-->
+<!--        <zero-col span="24" :narrow-pc="{span:8}">-->
+<!--            <div class="demo"></div>-->
+<!--        </zero-col>-->
+<!--        <zero-col span="24" :narrow-pc="{span:8}">-->
+<!--            <div class="demo"></div>-->
+<!--        </zero-col>-->
+<!--        <zero-col span="24" :narrow-pc="{span:8}">-->
+<!--            <div class="demo"></div>-->
+<!--        </zero-col>-->
+<!--    </zero-row>-->
 
 <!--    <zero-button :loading="loading1" @click="loading1 = !loading1">-->
 <!--        我爱JS-->
