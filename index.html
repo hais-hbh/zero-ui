@@ -34,16 +34,42 @@
     }
 
 </style>
-
+<style>
+    .demoBox{
+        height: 50px;
+        background: grey;
+        border: 1px solid red;
+    }
+</style>
 <body>
+
 <div id="app">
-    <div style="border: 1px solid red"><zero-row gutter="20">
-        <zero-col ></zero-col>
-        <zero-col ></zero-col>
+    <zero-row class="topbar">
+        <zero-col class="demoBox" span="9">
+            <zero-row align="left">
+                <zero-col>1</zero-col>
+                <zero-col>2</zero-col>
+                <zero-col>3</zero-col>
+                <zero-col>4</zero-col>
+            </zero-row>
+        </zero-col>
+        <zero-col class="demoBox" span="15">
+            <zero-row align="right">
+                <zero-col>1</zero-col>
+                <zero-col>2</zero-col>
+                <zero-col>3</zero-col>
+                <zero-col>4</zero-col>
+                <zero-col>5</zero-col>
+                <zero-col>6</zero-col>
+                <zero-col>7</zero-col>
+            </zero-row>
+        </zero-col>
     </zero-row>
-    </div>
-
-
+    <zero-row class="logo-and-search-and-qrcode">
+        <zero-col class="demoBox" span="4"></zero-col>
+        <zero-col class="demoBox" span="14"></zero-col>
+        <zero-col class="demoBox" span="6"></zero-col>
+    </zero-row>
 <!--    <zero-button :loading="loading1" @click="loading1 = !loading1">-->
 <!--        我爱JS-->
 <!--    </zero-button>-->
