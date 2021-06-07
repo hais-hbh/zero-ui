@@ -34,23 +34,15 @@
     }
 
 </style>
-<style>
-    .row{
-        display: flex;
-    }
-    .col{
-        height: 100px;
-        background-color: grey;
-        width: 50%;
-        border: 1px solid red;
-    }
-</style>
+
 <body>
 <div id="app">
-    <zero-row>
-        <zero-col span="2"></zero-col>
-        <zero-col span="22"></zero-col>
+    <div style="border: 1px solid red"><zero-row gutter="20">
+        <zero-col ></zero-col>
+        <zero-col ></zero-col>
     </zero-row>
+    </div>
+
 
 <!--    <zero-button :loading="loading1" @click="loading1 = !loading1">-->
 <!--        我爱JS-->
