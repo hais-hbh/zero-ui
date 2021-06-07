@@ -34,8 +34,24 @@
     }
 
 </style>
+<style>
+    .row{
+        display: flex;
+    }
+    .col{
+        height: 100px;
+        background-color: grey;
+        width: 50%;
+        border: 1px solid red;
+    }
+</style>
 <body>
 <div id="app">
+    <zero-row>
+        <zero-col span="2"></zero-col>
+        <zero-col span="22"></zero-col>
+    </zero-row>
+
 <!--    <zero-button :loading="loading1" @click="loading1 = !loading1">-->
 <!--        我爱JS-->
 <!--    </zero-button>-->
@@ -50,13 +66,15 @@
 <!--        <zero-button>更多</zero-button>-->
 <!--        <zero-button icon="right" icon-position="right">下一页</zero-button>-->
 <!--    </zero-button-group>-->
-    <zero-input value="张三"></zero-input>
-    <zero-input value="李四" disabled></zero-input>
-    <zero-input value="王五" readonly></zero-input>
-    <zero-input value="赵" error="姓名不能少于两个字"></zero-input>
-    <zero-input value="赵六" @change="inputChange"></zero-input>
-    <zero-input value="赵六" v-model="message"></zero-input>
-    <p>{{message}}</p>
+<!--    <zero-input value="张三"></zero-input>-->
+<!--    <zero-input value="李四" disabled></zero-input>-->
+<!--    <zero-input value="王五" readonly></zero-input>-->
+<!--    <zero-input value="赵" error="姓名不能少于两个字"></zero-input>-->
+<!--    <zero-input value="赵六" @change="inputChange"></zero-input>-->
+<!--    <zero-input value="赵六" v-model="message"></zero-input>-->
+<!--    <p>{{message}}</p>-->
+
+
 </div>
 <script src="./src/app.js"></script>
 <script src="./src/icon.js"></script>
