@@ -44,32 +44,28 @@
 <body>
 
 <div id="app">
-    <zero-row class="topbar">
-        <zero-col class="demoBox" span="9">
-            <zero-row align="left">
-                <zero-col>1</zero-col>
-                <zero-col>2</zero-col>
-                <zero-col>3</zero-col>
-                <zero-col>4</zero-col>
-            </zero-row>
+    <zero-row>
+        <zero-col span="2"
+                  :phone="{span:24}"
+                  :ipad="{span:8}"
+                  :narrow-pc="{span:4}"
+                  :pc="{span:2}"
+                  :wide-pc="{span:1}">
+            1
+
         </zero-col>
-        <zero-col class="demoBox" span="15">
-            <zero-row align="right">
-                <zero-col>1</zero-col>
-                <zero-col>2</zero-col>
-                <zero-col>3</zero-col>
-                <zero-col>4</zero-col>
-                <zero-col>5</zero-col>
-                <zero-col>6</zero-col>
-                <zero-col>7</zero-col>
-            </zero-row>
+        <zero-col span="22"
+                  :phone="{span:24}"
+                  :ipad="{span:16}"
+                  :narrow-pc="{span:20}"
+                  :pc="{span:22}"
+                  :wide-pc="{span:23}">
+            2
+
+
         </zero-col>
     </zero-row>
-    <zero-row class="logo-and-search-and-qrcode">
-        <zero-col class="demoBox" span="4"></zero-col>
-        <zero-col class="demoBox" span="14"></zero-col>
-        <zero-col class="demoBox" span="6"></zero-col>
-    </zero-row>
+
 <!--    <zero-button :loading="loading1" @click="loading1 = !loading1">-->
 <!--        我爱JS-->
 <!--    </zero-button>-->
